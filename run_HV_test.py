@@ -102,8 +102,8 @@ else:
 starting="D1=10"
 ser.write((starting+eol_char).encode('utf-8'))
 time.sleep(0.2)
-starting_Cur='C1=0.5E-3'
-ser.write((starting_Cur+eol_char).encode('utf-8'))
+thresold_Curr='C1=0.5E-3'
+ser.write((thresold_Curr+eol_char).encode('utf-8'))
 time.sleep(0.2)
 starting_Kill='T1=1'
 ser.write((starting_Kill+eol_char).encode('utf-8'))
