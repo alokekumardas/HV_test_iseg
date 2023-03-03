@@ -4,13 +4,15 @@
 
 #!/usr/bin/python
 import io
-import serial, time
+import serial
+import time
 import sys
 import csv
 import numpy
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 from optparse import OptionParser
 import serial.tools.list_ports as port_list
@@ -145,8 +147,8 @@ for incre in range(V_b, V_e+V_step, V_step):
     plt.xticks(rotation=45, ha='right')
     plt.subplots_adjust(bottom=0.30)
     plt.title('Voltage Vs Current curve')
-    plt.xlabel('Voltage (kV)')
-    plt.ylabel('Current (mA)') 
+    plt.xlabel('Voltage (Volt)')
+    plt.ylabel('Current (A)') 
     plt.pause(0.2)
     plt.draw() 
     mindata.append(str(ansv))
@@ -160,14 +162,16 @@ print('\nDone\n')
 
 current_datetime = datetime.now()
 date = datetime.now().strftime('%Y%m%d')
-time = datetime.now().strftime('-%H-%M-%S')
-filenames="HV_text-"+date+time+".txt"
-
+time_1 = datetime.now().strftime('-%H-%M-%S')
+filenames="HV_text-"+date+time_1+".txt"
+filenames_2="HV_text-"+date+time_1
 with open(filenames, 'w') as f:
     csv.writer(f, delimiter=' ').writerows(finaloutput)
 
+plt.savefig(filenames_2+".png")
 ser.close()  
 
-while True:
-    time.sleep(1)
+#Turn on if you want plot to stay in display after the test
+#while True:
+#	time.sleep(0.2)
 
