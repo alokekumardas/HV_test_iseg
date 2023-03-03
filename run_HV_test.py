@@ -56,7 +56,7 @@ parser.add_option('-p', '--step_volt',
 (options, arguments) = parser.parse_args()
 
 print("filename,",options.filename)
-print("Initial Volt,",options.voltage_in)
+print("USB Entering Volt,",options.voltage_in)
 print("Volt StepSize,",options.voltage_in)
 print("Start Volt,",options.step_volt)
 print("End Volt,",options.end_volt)
