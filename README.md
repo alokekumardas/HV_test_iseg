@@ -15,10 +15,13 @@ py run_HV_test.py -v 5 -s 10 -e 100 -p 5
 
 -e: End Voltage of test
 
+-p: Voltage step size
+
 To change the thresold current:  open run_HV_test.py and change "C1=0.5E-3" to desied value
 
 0.5E-3 = 0.5 mA 
 
 for gui
-https://www.tutorialspoint.com/python/python_gui_programming.htm
+
+python3 gui.py
 
