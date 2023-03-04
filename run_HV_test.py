@@ -57,8 +57,8 @@ parser.add_option('-p', '--step_volt',
 
 print("filename,",options.filename)
 print("USB Entering Volt,",options.voltage_in)
-print("Volt StepSize,",options.voltage_in)
-print("Start Volt,",options.step_volt)
+print("Volt StepSize,",options.step_volt)
+print("Start Volt,",options.start_volt)
 print("End Volt,",options.end_volt)
 
 V_b=int(options.start_volt)
