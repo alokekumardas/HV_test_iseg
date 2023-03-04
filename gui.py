@@ -15,8 +15,8 @@ top.title("HV test in I-Seg")
   
 top.geometry("400x250")  
 
-def runTest():
-	os.system("python3 run_HV_test.py -p %s -s %s -e %s"%(en1.get(),en2.get(),en3.get())) 
+def runTest():	
+	os.system("python3 run_HV_test.py -s %s -e %s -p %s"%(var1,var2,var3))
 
 Vi = tkinter.Label(top, text = "V_start").place(x = 30,y = 50)    
 Vf = tkinter.Label(top, text = "V_end").place(x = 30, y = 90)    
@@ -29,6 +29,16 @@ en2=tkinter.Entry(top)
 en2.place(x = 80, y = 90)  
 en3=tkinter.Entry(top)  
 en3.place(x = 80, y = 130)  
+var1=en1.get()
+var1=en1.get()
+var1=en1.get()
+if en1.get()=="" :
+	var1="10"
+if en2.get()=="" :
+	var2="100"
+if en3.get()=="" :
+	var3="10"
+
 
 Developername = tkinter.Label(top, text = "Developed by A. K. Das").place(x = 90,y = 230) 
 
