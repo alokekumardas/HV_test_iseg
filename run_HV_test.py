@@ -165,10 +165,10 @@ date = datetime.now().strftime('%Y%m%d')
 time_1 = datetime.now().strftime('-%H-%M-%S')
 filenames="HV_text-"+date+time_1+".txt"
 filenames_2="HV_text-"+date+time_1
-with open(filenames, 'w') as f:
+with open("Results/"+filenames, 'w') as f:
     csv.writer(f, delimiter=' ').writerows(finaloutput)
 
-plt.savefig(filenames_2+".png")
+plt.savefig("Results/"+filenames_2+".png")
 ser.close()  
 
 #Turn on if you want plot to stay in display after the test
