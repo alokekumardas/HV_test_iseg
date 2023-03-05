@@ -16,7 +16,7 @@ for p in ports:
 #    3. x, x is bigger than 0, float allowed, timeout block call
 
 ser = serial.Serial()
-ser.port = "COM6"
+ser.port = "COM4"
 ser.baudrate = 9600
 ser.bytesize = serial.EIGHTBITS #number of bits per bytes
 ser.parity = serial.PARITY_NONE #set parity check: no parity
