@@ -3,9 +3,6 @@
 ####email "das21aloke@gmail.com"
 # !/usr/bin/python3  
 
-
-
-
 import tkinter
 from tkinter import * 
 import os 
